@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkmy_docs=self.webpackChunkmy_docs||[]).push([[18],{6913:e=>{e.exports=JSON.parse('{"title":"Recent posts","items":[{"title":"MATLAB \u51fd\u6570","permalink":"/function/\u51fd\u6570","unlisted":false,"date":"2025-06-23T03:19:56.000Z"}]}')}}]);
