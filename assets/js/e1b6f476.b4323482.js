@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkmy_docs=self.webpackChunkmy_docs||[]).push([[7944],{5824:e=>{e.exports=JSON.parse('{"tags":[{"label":"MATLAB","permalink":"/modules/tags/matlab","count":1},{"label":"\u5de5\u5177\u7bb1","permalink":"/modules/tags/\u5de5\u5177\u7bb1","count":1},{"label":"\u6a21\u5757","permalink":"/modules/tags/\u6a21\u5757","count":1}]}')}}]);
