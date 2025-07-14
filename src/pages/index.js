@@ -1,3 +1,4 @@
+//主页的展示
 import React from 'react';
 import Layout from '@theme/Layout';
 import Link from '@docusaurus/Link';
@@ -8,10 +9,12 @@ import styles from './index.module.css';
 
 export default function Home() {
   const { siteConfig } = useDocusaurusContext();
+  const description = "开发文档、API参考和教程"; // 提取 description 变量
+
   return (
     <Layout
       title={`${siteConfig.title} - 技术文档`}
-      description="专业的开发文档、API参考和教程">
+      description={description}>
       
       {/* 1. 顶部英雄区域 */}
       <header className={styles.heroBanner}>
@@ -37,7 +40,7 @@ export default function Home() {
 
       {/* 2. 核心功能展示 */}
       <main>
-        <HomepageFeatures />
+        <HomepageFeatures description={description} /> {/* 传递 description Props */}
         
         {/* 3. 文档分类区块 */}
         <section className={styles.section}>
@@ -65,12 +68,13 @@ export default function Home() {
           <div className="container">
             <h2>最新动态</h2>
             <div className={styles.blogPosts}>
-              {/* 这里可以通过API动态获取最新博客 */}
+              {/* 
               <Link to="/examples/release-1.0" className={styles.blogCard}>
                 <h3>v1.0 版本发布</h3>
                 <p>2023-06-15</p>
                 <p>新特性：支持多语言文档...</p>
               </Link>
+              */}
             </div>
             <Link to="/examples" className="button button--secondary">
               查看所有博客

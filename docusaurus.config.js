@@ -20,15 +20,15 @@ const config = {
   },
 
   // Set the production url of your site here
-  url: 'https://ztqsqq.github.io',
+  url: 'https://zztqqxixi.github.io',
   // Set the /<baseUrl>/ pathname under which your site is served
   // For GitHub pages deployment, it is often '/<projectName>/'
   baseUrl: '/',
 
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
-  organizationName: 'ztqsqq', // Usually your GitHub org/user name.
-  projectName: 'ztqsqq.github.io', // Usually your repo name.
+  organizationName: 'zztqqxixi', // Usually your GitHub org/user name.
+  projectName: 'ztq.github.io', // Usually your repo name.
 
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
@@ -54,24 +54,6 @@ const config = {
           editUrl:
             'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
         },
-        blog: {
-          path: './examples',
-          routeBasePath: 'examples',
-          showReadingTime: true,
-          feedOptions: {
-            type: ['rss', 'atom'],
-            xslt: true,
-          },
-       
-          // Please change this to your repo.
-          // Remove this to remove the "edit this page" links.
-          editUrl:
-            'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
-          // Useful options to enforce blogging best practices
-          onInlineTags: 'warn',
-          onInlineAuthors: 'warn',
-          onUntruncatedBlogPosts: 'warn',
-        },
         theme: {
           customCss: './src/css/custom.css',
         },
@@ -80,24 +62,34 @@ const config = {
   ],
   plugins: [
     [
-      '@docusaurus/plugin-content-blog',
+      '@docusaurus/plugin-content-docs',
       {
-        id: 'functions-blog',         // 唯一标识符
+        id: 'functions-docs',         // 唯一标识符
         path: './function',           // Markdown 文件目录（建议放整个文件夹）
-        routeBasePath: 'function',    // 访问路径为 /function
-        editUrl: 'https://github.com/your-repo/',
+        routeBasePath: 'function',
+        sidebarPath: './sidebars.js',    // 访问路径为 /function
+        // editUrl: 'https://github.com//',
         // showReadingTime: true,
       },
     ],
-  [
-      '@docusaurus/plugin-content-blog',
+    ['@docusaurus/plugin-content-docs',
       {
-        id: 'modules',               // 唯一标识符
-        path: './modules',             // Markdown 文件路径
-        routeBasePath: 'modules',    // 访问路径为 /modules
-        editUrl: 'https://github.com/your-repo/edit/main/',   // 可选
-      },
-    ],
+        id:'examples-docs',         // 唯一标识符
+        path: './examples',           // Markdown 文件目录（建议放整个文件夹）
+        routeBasePath: 'examples',
+        
+        sidebarPath: './sidebars.js',    // 访问路径为 /function
+      }
+    ]
+  // [
+  //     '@docusaurus/plugin-content-blog',
+  //     {
+  //       id: 'modules',               // 唯一标识符
+  //       path: './modules',             // Markdown 文件路径
+  //       routeBasePath: 'modules',    // 访问路径为 /modules
+  //       // editUrl: 'https://github.com/your-repo/edit/main/',   // 可选
+  //     },
+  //   ],
   ],
 
   themeConfig:
@@ -120,7 +112,7 @@ const config = {
           },
           {to: '/examples', label: '示例', position: 'left'},
           {to: '/function', label: '函数', position: 'left'},
-          {to: '/moudules', label: '模块', position: 'left'},
+          // {to: '/modules', label: '模块', position: 'left'},
           {
             href: 'https://github.com/facebook/docusaurus',
             label: 'GitHub',
@@ -128,45 +120,45 @@ const config = {
           },
         ],
       },
-footer: {
-  style: 'dark',
-  links: [
-    {
-      title: '文档',
-      items: [
-        {
-          label: '快速入门',
-          to: '/docs/intro',
-        },
-        {
-          label: 'API 参考',
-          to: '/docs/api',
-        },
-        {
-          label: '开发指南',
-          to: '/docs/guides',
-        },
-      ],
-    },
-    {
-      title: '资源',
-      items: [
-        {
-          label: 'GitHub',
-          href: 'https://github.com/your-repo',
-        },
-        {
-          label: '示例代码',
-          to: '/blog',
-        },
-        {
-          label: '更新日志',
-          to: '/blog/release-notes',
-        },
-      ],
-    },
-  ],
-},
+// footer: {
+//   style: 'dark',
+//   links: [
+//     {
+//       title: '文档',
+//       items: [
+//         {
+//           label: '快速入门',
+//           to: '/docs/intro',
+//         },
+//         {
+//           label: 'API 参考',
+//           to: '/docs/api',
+//         },
+//         {
+//           label: '开发指南',
+//           to: '/docs/guides',
+//         },
+//       ],
+//     },
+//     {
+//       title: '资源',
+//       items: [
+//         {
+//           label: 'GitHub',
+//           href: 'https://github.com/your-repo',
+//         },
+//         {
+//           label: '示例代码',
+//           to: '/blog',
+//         },
+//         {
+//           label: '更新日志',
+//           to: '/blog/release-notes',
+//         },
+//       ],
+//     },
+//   ],
+// },
       prism: {
         theme: prismThemes.github,
         darkTheme: prismThemes.dracula,
