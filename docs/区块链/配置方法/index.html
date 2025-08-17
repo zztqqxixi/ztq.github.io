@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="generator" content="Docusaurus v3.8.1">
 <title data-rh="true">配置方法 | 技术文档</title><meta data-rh="true" name="viewport" content="width=device-width,initial-scale=1"><meta data-rh="true" name="twitter:card" content="summary_large_image"><meta data-rh="true" property="og:image" content="https://zztqqxixi.github.io/img/docusaurus-social-card.jpg"><meta data-rh="true" name="twitter:image" content="https://zztqqxixi.github.io/img/docusaurus-social-card.jpg"><meta data-rh="true" property="og:url" content="https://zztqqxixi.github.io/docs/区块链/配置方法"><meta data-rh="true" property="og:locale" content="cn"><meta data-rh="true" name="docusaurus_locale" content="cn"><meta data-rh="true" name="docsearch:language" content="cn"><meta data-rh="true" name="docusaurus_version" content="current"><meta data-rh="true" name="docusaurus_tag" content="docs-default-current"><meta data-rh="true" name="docsearch:version" content="current"><meta data-rh="true" name="docsearch:docusaurus_tag" content="docs-default-current"><meta data-rh="true" property="og:title" content="配置方法 | 技术文档"><meta data-rh="true" name="description" content="核心配置"><meta data-rh="true" property="og:description" content="核心配置"><link data-rh="true" rel="icon" href="/img/favicon.ico"><link data-rh="true" rel="canonical" href="https://zztqqxixi.github.io/docs/区块链/配置方法"><link data-rh="true" rel="alternate" href="https://zztqqxixi.github.io/docs/区块链/配置方法" hreflang="cn"><link data-rh="true" rel="alternate" href="https://zztqqxixi.github.io/docs/区块链/配置方法" hreflang="x-default"><script data-rh="true" type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"配置方法","item":"https://zztqqxixi.github.io/docs/区块链/配置方法"}]}</script><link rel="stylesheet" href="/assets/css/styles.7b073f05.css">
-<script src="/assets/js/runtime~main.f2c5c997.js" defer="defer"></script>
+<script src="/assets/js/runtime~main.e5632c88.js" defer="defer"></script>
 <script src="/assets/js/main.0bd4c48f.js" defer="defer"></script>
 </head>
 <body class="navigation-with-keyboard">
@@ -26,12 +26,112 @@
 <p>通过这种自动获取和配置的方式，简化了网络设置，确保节点之间能够顺利进行通信。</p>
 <hr>
 <h2 class="anchor anchorWithStickyNavbar_LWe7" id="数据库集成需手动启用">数据库集成（需手动启用）<a href="#数据库集成需手动启用" class="hash-link" aria-label="Direct link to 数据库集成（需手动启用）" title="Direct link to 数据库集成（需手动启用）">​</a></h2>
-<p>若要启用数据库集成功能，需取消注释 setupDatabase 任务实现。启用后，将实现以下功能：</p>
+<p>若要启用数据库集成功能，需取消注释 <code>setupDatabase</code> 任务实现。启用后，将实现以下功能：</p>
 <ul>
-<li>自动创建 corda_db 数据库</li>
+<li>自动创建 <code>corda_db</code> 数据库</li>
 <li>为每个节点生成独立数据库用户</li>
 <li>授予完整的 Schema 操作权限</li>
 </ul>
-<p>这一功能为项目的数据存储和管理提供了便利，同时保证了各节点数据的独立性和安全性。需要注意的是，目前暂时不能通过脚本进行授权，需要自己手动对数据库和用户进行授权。</p></div><footer class="theme-doc-footer docusaurus-mt-lg"><div class="row margin-top--sm theme-doc-footer-edit-meta-row"><div class="col"><a href="https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/区块链/3-配置方法.md" target="_blank" rel="noopener noreferrer" class="theme-edit-this-page"><svg fill="currentColor" height="20" width="20" viewBox="0 0 40 40" class="iconEdit_Z9Sw" aria-hidden="true"><g><path d="m34.5 11.7l-3 3.1-6.3-6.3 3.1-3q0.5-0.5 1.2-0.5t1.1 0.5l3.9 3.9q0.5 0.4 0.5 1.1t-0.5 1.2z m-29.5 17.1l18.4-18.5 6.3 6.3-18.4 18.4h-6.3v-6.2z"></path></g></svg>Edit this page</a></div><div class="col lastUpdated_JAkA"></div></div></footer></article><nav class="docusaurus-mt-lg pagination-nav" aria-label="Docs pages"><a class="pagination-nav__link pagination-nav__link--prev" href="/docs/区块链/环境准备"><div class="pagination-nav__sublabel">Previous</div><div class="pagination-nav__label">环境准备</div></a><a class="pagination-nav__link pagination-nav__link--next" href="/docs/区块链/Q&amp;A"><div class="pagination-nav__sublabel">Next</div><div class="pagination-nav__label">Q&amp;A</div></a></nav></div></div><div class="col col--3"><div class="tableOfContents_bqdL thin-scrollbar theme-doc-toc-desktop"><ul class="table-of-contents table-of-contents__left-border"><li><a href="#核心配置" class="table-of-contents__link toc-highlight">核心配置</a></li><li><a href="#节点定义" class="table-of-contents__link toc-highlight">节点定义</a></li><li><a href="#网络配置" class="table-of-contents__link toc-highlight">网络配置</a></li><li><a href="#数据库集成需手动启用" class="table-of-contents__link toc-highlight">数据库集成（需手动启用）</a></li></ul></div></div></div></div></main></div></div></div></div>
+<p>这一功能为项目的数据存储和管理提供了便利，同时保证了各节点数据的独立性和安全性。</p>
+<blockquote>
+<p><strong>注意</strong>：目前暂时不能通过脚本进行授权，需要自己手动对数据库和用户进行授权。</p>
+</blockquote>
+<hr>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="集成组件说明">集成组件说明<a href="#集成组件说明" class="hash-link" aria-label="Direct link to 集成组件说明" title="Direct link to 集成组件说明">​</a></h3>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="1-setup_corda_dbsql-脚本">1. <code>setup_corda_db.sql</code> 脚本<a href="#1-setup_corda_dbsql-脚本" class="hash-link" aria-label="Direct link to 1-setup_corda_dbsql-脚本" title="Direct link to 1-setup_corda_dbsql-脚本">​</a></h3>
+<p><strong>路径</strong>: <code>cordapp-example/setup_corda_db.sql</code></p>
+<p><strong>功能</strong>: Windows 系统&quot;零配置&quot;启动 PostgreSQL</p>
+<p><strong>首次执行行为</strong>:</p>
+<ul>
+<li>在 <code>%USERPROFILE%\psql\data</code> 初始化数据库实例</li>
+<li>创建与当前 Windows 用户名相同的超级用户（密码 <code>890415</code>）</li>
+</ul>
+<p><strong>非首次执行行为</strong>:</p>
+<ul>
+<li>检测 5432 端口占用情况（若被占用则直接退出）</li>
+<li>日志输出到 <code>%USERPROFILE%\psql\logs\postgres.log</code></li>
+</ul>
+<hr>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="2-start_postgresps1-脚本">2. <code>start_postgres.ps1</code> 脚本<a href="#2-start_postgresps1-脚本" class="hash-link" aria-label="Direct link to 2-start_postgresps1-脚本" title="Direct link to 2-start_postgresps1-脚本">​</a></h3>
+<p><strong>路径</strong>: <code>cordapp-example/start_postgres.ps1</code></p>
+<p><strong>功能</strong>: 幂等性准备 CordApp 数据库环境</p>
+<p><strong>DataDir和LogDir这两个路径需要根据安装的psql路径来具体修改</strong>:</p>
+<div class="language-powershell codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-powershell codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token plain"># 参数默认值</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">$DataDir = &quot;$env:USERPROFILE\psql\data&quot;</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">$LogDir  = &quot;$env:USERPROFILE\psql\logs&quot;</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">$Port = 5432</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">$UserName = (whoami)</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">$Password = &quot;890415&quot;</span><br></span></code></pre></div></div>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="3-gradle任务配置">3. Gradle任务配置<a href="#3-gradle任务配置" class="hash-link" aria-label="Direct link to 3. Gradle任务配置" title="Direct link to 3. Gradle任务配置">​</a></h3>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="31-任务概述">3.1 任务概述<a href="#31-任务概述" class="hash-link" aria-label="Direct link to 3.1 任务概述" title="Direct link to 3.1 任务概述">​</a></h3>
+<p>在build.gradle中定义了三个关键任务，用于将数据库操作整合到Gradle构建生命周期：</p>
+<ul>
+<li><code>startPostgresIfNeeded</code>: 自动启动PostgreSQL</li>
+<li><code>setupCordaDb</code>: 自动建库建用户</li>
+<li><code>deployNodes</code>: 最终部署节点，依赖于setupCordaDb</li>
+</ul>
+<hr>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="32-startpostgresifneeded任务">3.2 startPostgresIfNeeded任务<a href="#32-startpostgresifneeded任务" class="hash-link" aria-label="Direct link to 3.2 startPostgresIfNeeded任务" title="Direct link to 3.2 startPostgresIfNeeded任务">​</a></h3>
+<p><strong>作用</strong>: 自动启动PostgreSQL服务</p>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="行为说明">行为说明<a href="#行为说明" class="hash-link" aria-label="Direct link to 行为说明" title="Direct link to 行为说明">​</a></h4>
+<ul>
+<li><strong>Windows系统</strong>: 调用<code>start_postgres.ps1</code>脚本启动PostgreSQL</li>
+<li><strong>非Windows系统</strong>: 仅打印跳过信息，不执行任何操作</li>
+</ul>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="关键特性">关键特性<a href="#关键特性" class="hash-link" aria-label="Direct link to 关键特性" title="Direct link to 关键特性">​</a></h4>
+<ul>
+<li>幂等性设计：如果5432端口已被占用（PostgreSQL已运行），则不会重复启动</li>
+<li>无需手动干预，完全集成到构建流程</li>
+</ul>
+<hr>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="33-setupcordadb任务">3.3 setupCordaDb任务<a href="#33-setupcordadb任务" class="hash-link" aria-label="Direct link to 3.3 setupCordaDb任务" title="Direct link to 3.3 setupCordaDb任务">​</a></h3>
+<p><strong>作用</strong>: 自动创建数据库和用户</p>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="依赖关系">依赖关系<a href="#依赖关系" class="hash-link" aria-label="Direct link to 依赖关系" title="Direct link to 依赖关系">​</a></h4>
+<div class="language-groovy codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-groovy codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token plain">dependsOn &#x27;startPostgresIfNeeded&#x27;</span><br></span></code></pre></div></div>
+<p>确保数据库已启动后才执行后续操作。</p>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="执行流程">执行流程<a href="#执行流程" class="hash-link" aria-label="Direct link to 执行流程" title="Direct link to 执行流程">​</a></h4>
+<ol>
+<li>使用当前系统用户名和超级用户密码<code>890415</code>登录PostgreSQL</li>
+<li>执行<code>setup_corda_db.sql</code>脚本</li>
+<li>完成数据库和用户的创建与配置</li>
+</ol>
+<hr>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="34-deploynodes任务">3.4 deployNodes任务<a href="#34-deploynodes任务" class="hash-link" aria-label="Direct link to 3.4 deployNodes任务" title="Direct link to 3.4 deployNodes任务">​</a></h3>
+<p><strong>作用</strong>: 部署Corda节点</p>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="依赖关系-1">依赖关系<a href="#依赖关系-1" class="hash-link" aria-label="Direct link to 依赖关系" title="Direct link to 依赖关系">​</a></h4>
+<div class="language-groovy codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-groovy codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token plain">deployNodes.dependsOn &#x27;setupCordaDb&#x27;</span><br></span></code></pre></div></div>
+<p>确保在节点部署前，PostgreSQL数据库与用户已完全准备就绪。</p>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="执行时机">执行时机<a href="#执行时机" class="hash-link" aria-label="Direct link to 执行时机" title="Direct link to 执行时机">​</a></h4>
+<p>只有在以下条件满足后才会执行：</p>
+<ul>
+<li>PostgreSQL服务已启动</li>
+<li>必要的数据库（corda_party_a、corda_party_b）已创建</li>
+<li>数据库用户（user_a、user_b）已配置并授权</li>
+</ul>
+<hr>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="前提准备">前提准备<a href="#前提准备" class="hash-link" aria-label="Direct link to 前提准备" title="Direct link to 前提准备">​</a></h3>
+<ol>
+<li>
+<p>已安装PostgreSQL并将bin目录加入环境变量（使用<code>pg_ctl --version</code>和<code>psql --version</code>验证）</p>
+</li>
+<li>
+<p>PowerShell正常运行</p>
+</li>
+<li>
+<p>确认项目目录（cordapp-example的根目录下）包含以下文件：</p>
+<ul>
+<li><code>setup_corda_db.sql</code></li>
+<li><code>start_postgres.ps1</code></li>
+<li><code>build.gradle</code></li>
+</ul>
+</li>
+<li>
+<p>确保5432端口未被占用（若占用需停止服务或修改脚本中的<code>$Port</code>参数）</p>
+</li>
+<li>
+<p>在cordapp-example目录执行：</p>
+<div class="language-bash codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-bash codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token plain">.\gradlew deployNodes //节点运行</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">.\runnodes.bat //测试</span><br></span></code></pre></div></div>
+</li>
+</ol>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="注意事项">注意事项<a href="#注意事项" class="hash-link" aria-label="Direct link to 注意事项" title="Direct link to 注意事项">​</a></h2>
+<ol>
+<li>节点运行时如果进度长时间卡在83%，是因为 Gradle 把 pg_ctl start 当成“子进程”在等它结束，ctrl+c结束进程重新.\gradlew deployNodes即可（经过修改之后测试已经不会出现这种情况，如果出现，可以试一下）</li>
+<li>如果想修改psql超级用户密码，需要在第一次运行.\gradlew deployNodes之前对这两个脚本中的内容进行修改。</li>
+</ol></div><footer class="theme-doc-footer docusaurus-mt-lg"><div class="row margin-top--sm theme-doc-footer-edit-meta-row"><div class="col"><a href="https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/区块链/3-配置方法.md" target="_blank" rel="noopener noreferrer" class="theme-edit-this-page"><svg fill="currentColor" height="20" width="20" viewBox="0 0 40 40" class="iconEdit_Z9Sw" aria-hidden="true"><g><path d="m34.5 11.7l-3 3.1-6.3-6.3 3.1-3q0.5-0.5 1.2-0.5t1.1 0.5l3.9 3.9q0.5 0.4 0.5 1.1t-0.5 1.2z m-29.5 17.1l18.4-18.5 6.3 6.3-18.4 18.4h-6.3v-6.2z"></path></g></svg>Edit this page</a></div><div class="col lastUpdated_JAkA"></div></div></footer></article><nav class="docusaurus-mt-lg pagination-nav" aria-label="Docs pages"><a class="pagination-nav__link pagination-nav__link--prev" href="/docs/区块链/环境准备"><div class="pagination-nav__sublabel">Previous</div><div class="pagination-nav__label">环境准备</div></a><a class="pagination-nav__link pagination-nav__link--next" href="/docs/区块链/Q&amp;A"><div class="pagination-nav__sublabel">Next</div><div class="pagination-nav__label">Q&amp;A</div></a></nav></div></div><div class="col col--3"><div class="tableOfContents_bqdL thin-scrollbar theme-doc-toc-desktop"><ul class="table-of-contents table-of-contents__left-border"><li><a href="#核心配置" class="table-of-contents__link toc-highlight">核心配置</a></li><li><a href="#节点定义" class="table-of-contents__link toc-highlight">节点定义</a></li><li><a href="#网络配置" class="table-of-contents__link toc-highlight">网络配置</a></li><li><a href="#数据库集成需手动启用" class="table-of-contents__link toc-highlight">数据库集成（需手动启用）</a><ul><li><a href="#集成组件说明" class="table-of-contents__link toc-highlight">集成组件说明</a></li><li><a href="#1-setup_corda_dbsql-脚本" class="table-of-contents__link toc-highlight">1. <code>setup_corda_db.sql</code> 脚本</a></li><li><a href="#2-start_postgresps1-脚本" class="table-of-contents__link toc-highlight">2. <code>start_postgres.ps1</code> 脚本</a></li><li><a href="#3-gradle任务配置" class="table-of-contents__link toc-highlight">3. Gradle任务配置</a></li><li><a href="#31-任务概述" class="table-of-contents__link toc-highlight">3.1 任务概述</a></li><li><a href="#32-startpostgresifneeded任务" class="table-of-contents__link toc-highlight">3.2 startPostgresIfNeeded任务</a></li><li><a href="#33-setupcordadb任务" class="table-of-contents__link toc-highlight">3.3 setupCordaDb任务</a></li><li><a href="#34-deploynodes任务" class="table-of-contents__link toc-highlight">3.4 deployNodes任务</a></li><li><a href="#前提准备" class="table-of-contents__link toc-highlight">前提准备</a></li></ul></li><li><a href="#注意事项" class="table-of-contents__link toc-highlight">注意事项</a></li></ul></div></div></div></div></main></div></div></div></div>
 </body>
 </html>
